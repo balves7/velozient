@@ -1,4 +1,4 @@
-# Velozient DevOps Assesment
+# Velozient DevOps Assessment
 
 This README file explains how was build the terraform code for the DevOps Assignment:1 provided by Velozient. Also it contains a how to get started with the TF code.
 
