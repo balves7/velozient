@@ -48,7 +48,7 @@ There's an environment folder to maintain the variables for each environment "de
 
 ## Folders and files
 ##### backend.tf
-Used to set up the terraform.tfstate file in a remote backend, in this case Azure remote store.
+Used to set up the terraform.tfstate file in a remote backend, in this case Azure remote storage.
 
 #### docs/
 Contains the screenshots of the creation process as required.
