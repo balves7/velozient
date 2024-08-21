@@ -60,6 +60,14 @@ Contains the terraform.tfvars variables file for each environment
 Contains the code for resource blocks used by terraform as modules.
 Modules: network, app_vm, web_vm, db.
 
+network: This module creates the vnet configuration and the subnets to be used for the VMs. There are 3 subnets for each kind of workload, web, app and db. 
+
+app_vm: This modules creates a Virtual machine for application purposes as requested in the Assessment. In the security group block it was used a for_each to help when you want to add a new rule, you only need to create a new block in app_sg_rules variables located in this folder. The vm resource block and network interface are using the same approach.
+
+web_vm: This module contais the Load Balancer and 2 virtual machines with a public IP as requested in this project. VM resource block is using the for_each function to create the resources.
+
+db: This modules manages the Azure SQL Server, there's a flag "lifecycle"  to prevent accidental delete causing data lost. Make sure to change it to false if you want to destroy the infrastructure with terraform. 
+
 
 See the example bellow: 
 ```bash
